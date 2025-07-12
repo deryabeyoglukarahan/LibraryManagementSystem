@@ -1,0 +1,28 @@
+@model LibraryManagementSystem.Models.Author
+
+@{
+    ViewData["Title"] = "Yeni Yazar Ekle";
+}
+
+<h3 class="create-title">@ViewData["Title"]</h3>
+
+<form asp-action="Create" method="post">
+    <div class="form-group mb-3">
+        <label>Ad:</label>
+        <input asp-for="FirstName" class="form-control" />
+    </div>
+
+    <div class="form-group mb-3">
+        <label>Soyad:</label>
+        <input asp-for="LastName" class="form-control" />
+    </div>
+
+    <div class="form-group mb-3">
+        <label>Doğum Tarihi:</label>
+        <input asp-for="DateOfBirth" type="date" class="form-control" />
+    </div>
+
+    <br />
+    <button type="submit" class="btn btn-success">Kaydet</button>
+    <a href="/Author/List" class="btn btn-secondary">İptal</a>
+</form>

@@ -1,0 +1,51 @@
+@model List<LibraryManagementSystem.ViewModels.BookViewModel>
+
+@{
+    ViewData["Title"] = "Kitap Listesi";
+}
+
+
+<div class="text-center mb-4">
+    <div class="section-title">Kitap Listesi</div>
+    <div class="title-underline"></div>
+</div>
+
+<div class="mb-3 text-end">
+    <a class="btn custom-btn" href="/Book/Create">
+        <i class="bi bi-plus-lg"></i> Yeni Kitap Ekle
+    </a>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Başlık</th>
+                <th>Tür</th>
+                <th>Yazar</th>
+                <th>Yayın Tarihi</th>
+                <th>ISBN</th>
+                <th>Mevcut Kopya</th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in Model)
+            {
+                <tr>
+                    <td>@book.Title</td>
+                    <td>@book.Genre</td>
+                    <td>@book.AuthorFullName</td>
+                    <td>@book.PublishDate.ToShortDateString()</td>
+                    <td>@book.ISBN</td>
+                    <td>@book.CopiesAvailable</td>
+                    <td>
+                        <a class="btn btn-info btn-sm" href="/Book/Details/@book.Id"><i class="bi bi-info-circle"></i></a>
+                        <a class="btn btn-warning btn-sm" href="/Book/Edit/@book.Id"><i class="bi bi-pencil-square"></i></a>
+                        <a class="btn btn-danger btn-sm" href="/Book/Delete/@book.Id"><i class="bi bi-trash"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

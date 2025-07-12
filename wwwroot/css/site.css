@@ -1,0 +1,113 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.btn-info {
+  background-color: #F06292;
+  border-color: #F06292;
+}
+
+.btn-warning {
+  background-color: #90CAF9;
+  border-color: #90CAF9;
+}
+
+.full-height-section {
+  min-height: calc(100vh - 160px);
+  display: flex;
+  align-items: center;
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #CE93D8;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.about-icon img {
+  height: 70px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #CE93D8;
+}
+
+.title-underline {
+  width: 150px;
+  height: 3px;
+  background-color: #ccc;
+  margin: 0 auto 30px auto;
+}
+
+.custom-btn {
+  background-color: #000;
+  color: #fff;
+  border-radius: 25px;
+  padding: 8px 20px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.create-title,
+.details-title,
+.edit-title,
+.delete-title {
+  margin: 20px 0;
+  color: #CE93D8;
+}
+
+.card-title {
+  color: #673AB7;
+  margin-bottom: 20px;
+}
+
+.card {
+  border: 2px solid #673AB7;
+}

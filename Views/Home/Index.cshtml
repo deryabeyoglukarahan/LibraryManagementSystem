@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Ana Sayfa";
+}
+
+
+<div class="container full-height-section">
+    <div class="row w-100 align-items-center">
+        <!-- Sol: Görsel -->
+        <div class="col-md-6 text-center mb-4 mb-md-0">
+            <img src="~/images/library.jpg" class="img-fluid" alt="Kütüphane Görseli" />
+        </div>
+
+        <!-- Sağ: Yazı + Butonlar -->
+        <div class="col-md-6 text-center text-md-start">
+            <h2 class="mb-4">📚 Kütüphane Yönetim Sistemi</h2>
+            <p class="mb-4">
+                Bu sistem aracılığıyla kitap ve yazar bilgilerini kolayca yönetebilirsiniz.
+            </p>
+            <a class="btn btn-primary me-2 mb-2" asp-controller="Book" asp-action="List">
+                Kitaplar <i class="bi bi-arrow-right-circle ms-1"></i>
+            </a>
+            <a class="btn btn-dark mb-2" asp-controller="Author" asp-action="List">
+                Yazarlar <i class="bi bi-arrow-right-circle ms-1"></i>
+            </a>
+        </div>
+    </div>
+</div>

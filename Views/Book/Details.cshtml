@@ -1,0 +1,22 @@
+@model LibraryManagementSystem.ViewModels.BookViewModel
+
+
+@{
+    ViewData["Title"] = "Kitap Detayları";
+}
+
+<h3 class="details-title">@ViewData["Title"]</h3>
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">@Model.Title</h4>
+
+        <p><strong>Tür:</strong> @Model.Genre</p>
+        <p><strong>Yayın Tarihi:</strong> @Model.PublishDate.ToShortDateString()</p>
+        <p><strong>ISBN:</strong> @Model.ISBN</p>
+        <p><strong>Mevcut Kopya:</strong> @Model.CopiesAvailable</p>
+        <p><strong>Yazar:</strong> @Model.AuthorFullName</p>
+
+    </div>
+</div>
+<a class="btn btn-dark mt-3" href="/Book/List">Geri Dön</a>

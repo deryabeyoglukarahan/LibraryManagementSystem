@@ -1,0 +1,17 @@
+@model LibraryManagementSystem.Models.Author
+
+@{
+    ViewData["Title"] = "Yazar Detayları";
+}
+
+<h3 class="details-title">@ViewData["Title"]</h3>
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">@Model.FirstName @Model.LastName</h4>
+
+        <p><strong>Doğum Tarihi:</strong> @Model.DateOfBirth.ToShortDateString()</p>
+
+    </div>
+</div>
+<a class="btn btn-dark mt-3" href="/Author/List">Geri Dön</a>
